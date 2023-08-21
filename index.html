@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codedamn - Quiz Project</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="time">
+            <span class="time_text">Time:</span>
+            <span class="time_counter"></span>
+        </div>
+        <!-- <div class="high-scores">
+            <span>View Highscores</span>
+            <i class="fa-solid fa-hand-point-left"></i>
+        </div> -->
+
+    </nav>
+    <main class="main">
+
+        <!-- Start Card -->
+
+        <div class="start-card">
+            <h3 class="heading">Coding Quiz Challenge</h3>
+            <div class="description">
+                <p>Try to answer to following code-related questions within the time limit.</p>
+                <p>Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
+                <p>Once you go to next question, you cannot go back to previous question!</p>
+            </div>
+            <button class="btn">
+                Start Quiz
+            </button>
+        </div>
+
+        <!-- Question Card -->
+
+        <div>
+            <div class="questions-card">
+                <h3 class="question"><!-- Commonly used data types DO NOT include: --></h3>
+                <div class="option-list">
+                    <!-- <div class="option">
+                    <span>1. strings</span>
+                </div>
+
+                <div class="option">
+                    <span>2. booleans</span>
+                </div>
+
+                <div class="option">
+                    <span>3. alerts</span>
+                </div>
+
+                <div class="option">
+                    <span>4. numbers</span>
+                </div> -->
+                </div>
+            </div>
+            <div class="footer-que-no">
+                Question <span class="que-no">1</span> out of <span class="total-que">5</span>
+            </div>
+            <div class="footer_btns">
+                <button class="next_btn btn">Next Que</button>
+            </div>
+            <div class="submit_btn">
+                <button type="submit">Submit</button>
+            </div>
+        </div>
+
+        <!-- Submit Card -->
+
+        <div class="submit-card">
+            <h3 class="submit-text">All done!</h3>
+            <p>Your final score is <span class="score">9</span>.</p>
+            <div>
+                <form action="thankyou.html" id="submit-form" method="get">
+                    <label for="initials">Enter initials:
+                        <input type="text" name="initials" id="initials" required autocomplete="off">
+                    </label>
+                    <button class="initial-submit-btn" type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Highscore Card -->
+
+        <div class="highscore-card">
+            <h3 class="submit-text">Highscores</h3>
+            <span class="hs_initials">DV - <span class="hs_scores">5</span></span>
+            <button class="go-back">Go Back</button>
+            <!-- <button class="btn highscores">Clear Highscores</button> -->
+        </div>
+
+    </main>
+    <script src="script.js"></script>
+    <script src="questions.js"></script>
+</body>
+
+</html>

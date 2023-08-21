@@ -1,0 +1,305 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap'); */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+:root {
+    --bright_orange: #f5820f;
+    --dark_orange: #bf6002;
+
+}
+
+/* Navbar Styling */
+
+.navbar {
+    position: relative;
+    background-color: var(--bright_orange);
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.high-scores span,
+.high-scores i,
+.time {
+    font-size: 1.1rem;
+    color: white;
+    pointer-events: none;
+}
+
+.time_counter {
+    font-weight: 600;
+}
+
+.high-scores span {
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+/* Main Styling */
+
+.start-card,
+.questions-card,
+.submit-card,
+.highscore-card {
+    /* background-color: crimson; */
+    width: 50%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid lightgray;
+    border-radius: 25px;
+    box-shadow: 15px 8px 5px rgba(128, 128, 128, 0.592);
+    padding: 90px 50px 0 50px;
+    transition: all 0.2s ease;
+    display: none;
+}
+
+.start-card {
+    display: flex;
+}
+
+.hide_start-card {
+    display: none;
+    transition: all 0.2s ease;
+}
+
+.start-card:nth-child(n) {
+    line-height: 45px;
+}
+
+.start-card .heading {
+    font-size: 2.2rem;
+}
+
+.start-card .description p {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.btn {
+    padding: 12px 18px;
+    font-size: 14px;
+    border-radius: 10px;
+    border: 1px solid var(--bright_orange);
+    background-color: var(--bright_orange);
+    color: white;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background-color: var(--dark_orange);
+    border: 1px solid var(--dark_orange);
+    color: #fff;
+}
+
+/* Question Card */
+
+.questions-card {
+    /* display: block; */
+    padding: 80px 60px;
+    height: 500px;
+    transition: all 0.2s ease;
+}
+
+.questions-card .question {
+    font-size: 1.65rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+    height: 90px;
+}
+
+.option-list .option span {
+    display: inline-flex;
+    background-color: var(--bright_orange);
+    height: 35px;
+    width: 100%;
+    margin: 5px 0;
+    align-items: center;
+    padding: 20px 12px;
+    border-radius: 12px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    border: 1px solid var(--bright_orange);
+    transition: all .1s ease;
+    position: relative;
+}
+
+
+.option-list .option.correct span {
+    background-color: green;
+    border: 1px solid green;
+}
+
+.option-list .option.wrong span {
+    background-color: rgb(195, 39, 39);
+    border: 1px solid rgb(195, 39, 39);
+}
+
+.option-list .option.disabled {
+    pointer-events: none;
+}
+
+.option-list .option span:hover {
+    background-color: var(--dark_orange);
+    color: white;
+}
+
+/* Question no. at footer */
+
+.footer-que-no {
+    display: none;
+    height: 30px;
+    position: relative;
+    top: 5px;
+    left: 43%;
+    /* border: 1px solid red; */
+    padding: 5px 10px;
+    text-align: center;
+    font-size: 20px;
+    align-items: center;
+}
+
+.footer-que-no span {
+    font-weight: 700;
+}
+
+/* previous and next button styling */
+
+.footer_btns {
+    display: none;
+    position: absolute;
+    bottom: 155px;
+    left: 45%;
+}
+
+.submit_btn {
+    display: none;
+    position: absolute;
+    bottom: 155px;
+    left: 64%;
+
+}
+
+.submit_btn button {
+    padding: 12px 28px;
+    font-size: 14px;
+    border-radius: 10px;
+    border: 1px solid red;
+    background-color: red;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.1s ease;
+    margin-top: 20px;
+
+}
+
+.submit_btn button:hover {
+    border: 1px solid rgb(155, 9, 9);
+    background-color: rgb(155, 9, 9);
+}
+
+.hide {
+    display: none;
+}
+
+
+/* Submit Card styling */
+
+.submit-card,
+.highscore-card {
+    display: none;
+    width: 30%;
+    height: 225px;
+    padding: 50px 50px 0 50px;
+    line-height: 40px;
+    transition: all 0.2s ease;
+}
+
+.submit-card .submit-text {
+    font-size: 2.2rem;
+}
+
+.submit-card p .score {
+    font-weight: bold;
+}
+
+.submit-card div input[type="text"] {
+    width: 80px;
+    font-size: 16px;
+    padding: 2px;
+    text-transform: uppercase;
+}
+
+.submit-card div button[type="submit"] {
+    font-size: 16px;
+    padding: 3px 10px;
+    color: white;
+    background-color: red;
+    outline: none;
+    border: 1px solid red;
+    transition: all 0.1s ease;
+}
+
+.submit-card div button[type="submit"]:hover {
+    cursor: pointer;
+    background-color: rgb(171, 9, 9);
+    border: 1px solid rgb(171, 9, 9);
+}
+
+/* Highscore card */
+
+.highscore-card {
+    display: none;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    height: 350px;
+    padding: 50px 30px 20px;
+}
+
+.highscore-card .go-back {
+    position: absolute;
+    bottom: 15px;
+    padding: 12px 18px;
+    font-size: 14px;
+    border-radius: 10px;
+    border: 1px solid var(--bright_orange);
+    background-color: var(--bright_orange);
+    color: white;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.1s ease;
+}
+
+.highscore-card .hs_initials {
+    line-height: 25px;
+}
+
+.highscore-card .go-back:hover {
+    border: 1px solid var(--dark_orange);
+    background-color: var(--dark_orange);
+}
+
+.hs_initials {
+    font-weight: 600;
+}
+
+.hs_initials span  {
+    font-weight: 500;
+}

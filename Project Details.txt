@@ -1,0 +1,21 @@
+Quiz App functions  - 
+
+. Start quiz
+. Display 60s timer
+. Shows question number below question card with total number of questions
+. If timer runs out, submits automatically
+. Select answer, then shows if its correct or wrong
+. After last question, Submit button appears
+. After submission or time up, timer stops
+. Asks to fill initials and submit it.
+. After submission, redirects to thank you page!
+
+In the backend - 
+
+1. Saves all data of users who played quiz.
+2. All the data is stored locally.
+
+
+Remaining work - 
+
+1. Update scoreboard with users initials and score 
